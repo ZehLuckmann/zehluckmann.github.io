@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Atléticas Universipraia 2018</title>
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+
+      // This example adds a marker to indicate the position of Bondi Beach in Sydney,
+      // Australia.
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 17,
+          center: {lat: -28.485500, lng: -48.768865}
+        });
+
+        var imageAARDS = 'icons/icon_AARDS.png';
+        var AARDSMarker = new google.maps.Marker({
+          position: {lat: -28.482926, lng: -48.770402},
+          map: map,
+          icon: imageAARDS
+        });
+
+        var imageAAAAF = 'icons/icon_AAAAF.png';
+        var AAAAFMarker = new google.maps.Marker({
+          position: {lat: -28.478907, lng: -48.771126},
+          map: map,
+          icon: imageAAAAF
+        });
+
+        var imageAAAOF = 'icons/icon_AAAOF.png';
+        var AAAOFMarker = new google.maps.Marker({
+          position: {lat: -28.478918, lng: -48.771319},
+          map: map,
+          icon: imageAAAOF
+        });
+
+        var imageMAMUTES = 'icons/icon_MAMUTES.png';
+        var MAMUTESMarker = new google.maps.Marker({
+          position: {lat: -28.467057, lng: -48.770600},
+          map: map,
+          icon: imageMAMUTES
+        });
+
+        var imageAAAEA = 'icons/icon_AAAEA.png';
+        var AAAEAMarker = new google.maps.Marker({
+          position: {lat: -28.486639, lng: -48.766250},
+          map: map,
+          icon: imageAAAEA
+        });
+
+        var imageAAASF = 'icons/icon_AAASF.png';
+        var AAASFAMarker = new google.maps.Marker({
+          position: {lat: -28.487632, lng: -48.771689},
+          map: map,
+          icon: imageAAASF
+        });
+
+        var imageAAAMV = 'icons/icon_AAAMV.png';
+        var AAAMVMarker = new google.maps.Marker({
+          position: {lat: -28.487452, lng: -48.771689},
+          map: map,
+          icon: imageAAAMV
+        });
+
+        var imageAAASC = 'icons/icon_AAASC.png';
+        var AAASCMarker = new google.maps.Marker({
+          position: {lat: -28.467057, lng: -48.768000},
+          map: map,
+          icon: imageAAASC
+        });
+
+        var imageUNI = 'icons/icon_UNI.png';
+        var UNIARENAMarker = new google.maps.Marker({
+          position: {lat: -28.485532, lng: -48.765468},
+          map: map,
+          icon: imageUNI
+        });
+        var UNIOPENMarker = new google.maps.Marker({
+          position: {lat: -28.494719, lng: -48.761675},
+          map: map,
+          icon: imageUNI
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhVDcFleHYnZRiv4UZ-y7DJGgPEgn1hUk&callback=initMap">
+    </script>
+  </body>
+</html>
