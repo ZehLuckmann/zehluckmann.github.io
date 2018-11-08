@@ -8,7 +8,10 @@
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
       #map {
-        height: 100%;
+        height: 94%;
+      }
+      #filter_menu{
+        height: 4%;
       }
       /* Optional: Makes the sample page fill the window. */
       html, body {
@@ -20,21 +23,23 @@
   </head>
   <body>
     <div id="filter_menu">
-      <select id="estado">
+      Estado:
+      <select id="estado" onchange="initMap()">
        <option value="">Todos</option>
        <option value="PR">Paraná</option>
        <option value="RS">Rio Grande do Sul</option>
        <option value="SC">Santa Catarina</option>
       </select>
-      <select id="cidade">
+      Cidade:
+      <select id="cidade" onchange="initMap()">
        <option value="">Todos</option>
        <option value="Blumenau">Blumenau</option>
        <option value="Caxias do Sul">Caxias do Sul</option>
        <option value="Chapeco">Chapecó</option>
        <option value="Curitiba">Curitiba</option>
+       <option value="Florianopolis">Florianópolis</option>
        <option value="Guarapuava">Guarapuava</option>
       </select>
-      <button onclick="initMap()">Filtrar</button>
     </div>
     <div id="map"></div>
     <script>
@@ -46,6 +51,22 @@
         });
 
         var atleticas = [
+
+          ["AAAEA_UNISOSIESC", "Curitiba", "PR", -28.489165, -48.768100],
+          ["A3RI", "Florianopolis", "SC", -28.497894,-48.758274],
+
+          ["ATEC", "Florianopolis", "SC", -28.490030, -48.773589],
+          ["ATEP", "Florianopolis", "SC", -28.489486, -48.771194],
+          ["ATEL", "Florianopolis", "SC", -28.493645, -48.769116],
+          ["DIREITO_UFSC", "Florianopolis", "SC", -28.487847, -48.771611],
+          ["AESA", "Florianopolis", "SC", -28.488964, -48.768596],
+          ["ATACA", "Florianopolis", "SC", -28.488803, -48.768497],
+          ["A7", "Florianopolis", "SC", -28.487967, -48.767905],
+          ["ATEQA", "Florianopolis", "SC", -28.486179, -48.771625],
+          ["ATM", "Florianopolis", "SC", -28.486040, -48.768656],
+          ["ATARQ", "Florianopolis", "SC", -28.485596, -48.767667],
+
+          ["AAAMHS", "Pelotas", "RS", -28.489570, -48.770931],
           ["GENERAL", "Caxias do Sul", "RS", -28.489720, -48.766580],
           ["ASA", "Curitiba", "PR", -28.489088, -48.765250],
           ["Engenharias IFSUL", "Pelotas", "RS", -28.481664, -48.768876],
