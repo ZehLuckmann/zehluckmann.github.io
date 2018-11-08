@@ -19,175 +19,70 @@
     </style>
   </head>
   <body>
+    <div id="filter_menu">
+      <select id="estado">
+       <option value="">Todos</option>
+       <option value="PR">Paraná</option>
+       <option value="RS">Rio Grande do Sul</option>
+       <option value="SC">Santa Catarina</option>
+      </select>
+      <select id="cidade">
+       <option value="">Todos</option>
+       <option value="Blumenau">Blumenau</option>
+       <option value="Caxias do Sul">Caxias do Sul</option>
+       <option value="Chapeco">Chapecó</option>
+       <option value="Curitiba">Curitiba</option>
+       <option value="Guarapuava">Guarapuava</option>
+      </select>
+      <button onclick="initMap()">Filtrar</button>
+    </div>
     <div id="map"></div>
     <script>
 
-      // This example adds a marker to indicate the position of Bondi Beach in Sydney,
-      // Australia.
       function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 17,
           center: {lat: -28.485500, lng: -48.768865}
         });
-        
-        var imageGENERAL = 'icons/icon_GENERAL.png';
-        var GENERALMarker = new google.maps.Marker({
-          position: {lat: -28.489720, lng: -48.766580},
-          map: map,
-          icon: imageGENERAL
-        });
 
-        var imageASA = 'icons/icon_ASA.png';
-        var ASAMarker = new google.maps.Marker({
-          position: {lat: -28.489088, lng: -48.765250},
-          map: map,
-          icon: imageASA
-        });
-
-        var imageAAAEI = 'icons/icon_AAAEI.png';
-        var AAAEIMarker = new google.maps.Marker({
-          position: {lat: -28.481664, lng: -48.768876},
-          map: map,
-          icon: imageAAAEI
-        });
-
-        var imageTENDEL = 'icons/icon_TENDEL.png';
-        var TENDELMarker = new google.maps.Marker({
-          position: {lat: -28.481721, lng: -48.768162},
-          map: map,
-          icon: imageTENDEL
-        });
-
-        var imageGALOS = 'icons/icon_GALOS.png';
-        var GALOSMarker = new google.maps.Marker({
-          position: {lat: -28.4991569, lng: -48.759666},
-          map: map,
-          icon: imageGALOS
-        });
-
-        var imageCAOTICOS = 'icons/icon_CAOTICOS.png';
-        var CAOTICOSMarker = new google.maps.Marker({
-          position: {lat: -28.440523, lng: -48.822045},
-          map: map,
-          icon: imageCAOTICOS
-        });
-
-        var imageENGENIOS = 'icons/icon_ENGENIOS.png';
-        var ENGENIOSMarker = new google.maps.Marker({
-          position: {lat: -28.4831585, lng: -48.7689839},
-          map: map,
-          icon: imageENGENIOS
-        });
-
-        var imagePDC = 'icons/icon_PDC.png';
-        var PDCMarker = new google.maps.Marker({
-          position: {lat: -28.494793, lng: -48.767998},
-          map: map,
-          icon: imagePDC
-        });
-
-        var imageAAAO = 'icons/icon_AAAO.png';
-        var AAAOMarker = new google.maps.Marker({
-          position: {lat: -28.479170, lng: -48.771095},
-          map: map,
-          icon: imageAAAO
-        });
-
-        var imageAAAX = 'icons/icon_AAAX.png';
-        var AAAXMarker = new google.maps.Marker({
-          position: {lat: -28.490203, lng: -48.768166},
-          map: map,
-          icon: imageAAAX
-        });
-
-        var imageUNISC = 'icons/icon_UNISC.png';
-        var UNISCMarker = new google.maps.Marker({
-          position: {lat: -28.480336, lng: -48.773805},
-          map: map,
-          icon: imageUNISC
-        });
-
-        var imageAAA = 'icons/icon_AAA.png';
-        var AAAMarker = new google.maps.Marker({
-          position: {lat: -28.479283, lng: -48.771273},
-          map: map,
-          icon: imageAAA
-        });
-
-        var imageELCARTEL = 'icons/icon_ELCARTEL.png';
-        var ELCARTELMarker = new google.maps.Marker({
-          position: {lat: -28.479589, lng: -48.768564},
-          map: map,
-          icon: imageELCARTEL
-        });
-
-        var imageAARDS = 'icons/icon_AARDS.png';
-        var AARDSMarker = new google.maps.Marker({
-          position: {lat: -28.482926, lng: -48.770402},
-          map: map,
-          icon: imageAARDS
-        });
-
-        var imageAAAAF = 'icons/icon_AAAAF.png';
-        var AAAAFMarker = new google.maps.Marker({
-          position: {lat: -28.478907, lng: -48.771126},
-          map: map,
-          icon: imageAAAAF
-        });
-
-        var imageAAAOF = 'icons/icon_AAAOF.png';
-        var AAAOFMarker = new google.maps.Marker({
-          position: {lat: -28.478918, lng: -48.771319},
-          map: map,
-          icon: imageAAAOF
-        });
-
-        var imageMAMUTES = 'icons/icon_MAMUTES.png';
-        var MAMUTESMarker = new google.maps.Marker({
-          position: {lat: -28.467057, lng: -48.770600},
-          map: map,
-          icon: imageMAMUTES
-        });
-
-        var imageAAAEA = 'icons/icon_AAAEA.png';
-        var AAAEAMarker = new google.maps.Marker({
-          position: {lat: -28.486639, lng: -48.766250},
-          map: map,
-          icon: imageAAAEA
-        });
-
-        var imageAAASF = 'icons/icon_AAASF.png';
-        var AAASFAMarker = new google.maps.Marker({
-          position: {lat: -28.487632, lng: -48.771689},
-          map: map,
-          icon: imageAAASF
-        });
-
-        var imageAAAMV = 'icons/icon_AAAMV.png';
-        var AAAMVMarker = new google.maps.Marker({
-          position: {lat: -28.487452, lng: -48.771689},
-          map: map,
-          icon: imageAAAMV
-        });
-
-        var imageAAASC = 'icons/icon_AAASC.png';
-        var AAASCMarker = new google.maps.Marker({
-          position: {lat: -28.467057, lng: -48.768000},
-          map: map,
-          icon: imageAAASC
-        });
-
-        var imageUNI = 'icons/icon_UNI.png';
-        var UNIARENAMarker = new google.maps.Marker({
-          position: {lat: -28.485532, lng: -48.765468},
-          map: map,
-          icon: imageUNI
-        });
-        var UNIOPENMarker = new google.maps.Marker({
-          position: {lat: -28.494719, lng: -48.761675},
-          map: map,
-          icon: imageUNI
-        });
+        var atleticas = [
+          ["GENERAL", "Caxias do Sul", "RS", -28.489720, -48.766580],
+          ["ASA", "Curitiba", "PR", -28.489088, -48.765250],
+          ["Engenharias IFSUL", "Pelotas", "RS", -28.481664, -48.768876],
+          ["TENDEL", "Chapeco", "SC", -28.481721, -48.768162],
+          ["GALOS", "", "", -28.4991569, -48.759666],
+          ["CAOTICOS", "", "", -28.440523, -48.822045],
+          ["ENGENIOS", "Joinvile", "SC", -28.4831585, -48.7689839],
+          ["PDC", "Criciúma", "SC", -28.494793, -48.767998],
+          ["AAAO", "", "", -28.479170, -48.771095],
+          ["AAAX", "", "", -28.490203, -48.768166],
+          ["UNISC", "Santa Cruz do Sul", "RS", -28.480336, -48.773805],
+          ["AAA", "", "", -28.479283, -48.771273],
+          ["ELCARTEL", "", "", -28.479589, -48.768564],
+          ["AARDS", "Blumenau", "SC", -28.482926, -48.770402],
+          ["AAAAF", "Blumenau", "SC", -28.478907, -48.771126],
+          ["AAAOF", "Blumenau", "SC", -28.478918, -48.771319],
+          ["MAMUTES", "Guarapuava", "PR", -28.467057, -48.770600],
+          ["AAAEA", "Blumenau", "SC", -28.486639, -48.766250],
+          ["AAASF", "Blumenau", "SC", -28.487632, -48.771689],
+          ["AAAMV", "Blumenau", "SC", -28.487452, -48.771689],
+          ["AAASC", "Blumenau", "SC", -28.467057, -48.768000],
+          ["UNI", "", "", -28.485532, -48.765468],
+          ["UNI", "", "", -28.494719, -48.761675],
+        ]
+        for (atletica in atleticas)
+        {
+          if((document.getElementById('estado').value == atleticas[atletica][2] || document.getElementById('estado').value == "") &&
+          (document.getElementById('cidade').value == atleticas[atletica][1] || document.getElementById('cidade').value == ""))
+          {
+            var image = 'icons/icon_'+atleticas[atletica][0]+'.png';
+            var Marker = new google.maps.Marker({
+              position: {lat: atleticas[atletica][3], lng: atleticas[atletica][4]},
+              map: map,
+              icon: image
+            });
+          }
+        }
       }
     </script>
     <script async defer
