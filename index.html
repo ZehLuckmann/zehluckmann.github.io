@@ -39,6 +39,8 @@
        <option value="Curitiba">Curitiba</option>
        <option value="Florianopolis">Florianópolis</option>
        <option value="Guarapuava">Guarapuava</option>
+       <option value="Xanxere">Xanxerê</option>
+
       </select>
     </div>
     <div id="map"></div>
@@ -51,10 +53,11 @@
         });
 
         var atleticas = [
-
+          ["ATENUN", "Joinvile", "SC", -28.480825, -48.768760],
+          ["CCTJ", "Joinvile", "SC", -28.479033, -48.768696],
+          ["AAACEM", "Joinvile", "SC", -28.494260, -48.765891],
           ["AAAEA_UNISOSIESC", "Curitiba", "PR", -28.489165, -48.768100],
           ["A3RI", "Florianopolis", "SC", -28.497894,-48.758274],
-
           ["ATEC", "Florianopolis", "SC", -28.490030, -48.773589],
           ["ATEP", "Florianopolis", "SC", -28.489486, -48.771194],
           ["ATEL", "Florianopolis", "SC", -28.493645, -48.769116],
@@ -65,8 +68,8 @@
           ["ATEQA", "Florianopolis", "SC", -28.486179, -48.771625],
           ["ATM", "Florianopolis", "SC", -28.486040, -48.768656],
           ["ATARQ", "Florianopolis", "SC", -28.485596, -48.767667],
-
           ["AAAMHS", "Pelotas", "RS", -28.489570, -48.770931],
+          ["AAAMHS", "Pelotas", "RS", -28.483807, -48.768245],
           ["GENERAL", "Caxias do Sul", "RS", -28.489720, -48.766580],
           ["ASA", "Curitiba", "PR", -28.489088, -48.765250],
           ["Engenharias IFSUL", "Pelotas", "RS", -28.481664, -48.768876],
@@ -76,7 +79,9 @@
           ["ENGENIOS", "Joinvile", "SC", -28.4831585, -48.7689839],
           ["PDC", "Criciúma", "SC", -28.494793, -48.767998],
           ["AAAO", "", "", -28.479170, -48.771095],
-          ["AAAX", "", "", -28.490203, -48.768166],
+          ["AAAX", "Xanxere", "SC", -28.490203, -48.768166],
+          ["AAAX", "Xanxere", "SC", -28.487508, -48.767091],
+          ["AAAX", "Xanxere", "SC", -28.486441, -48.771894],
           ["UNISC", "Santa Cruz do Sul", "RS", -28.480336, -48.773805],
           ["AAA", "", "", -28.479283, -48.771273],
           ["ELCARTEL", "", "", -28.479589, -48.768564],
@@ -93,8 +98,9 @@
         ]
         for (atletica in atleticas)
         {
-          if((document.getElementById('estado').value == atleticas[atletica][2] || document.getElementById('estado').value == "") &&
-          (document.getElementById('cidade').value == atleticas[atletica][1] || document.getElementById('cidade').value == ""))
+          if(((document.getElementById('estado').value == atleticas[atletica][2] || document.getElementById('estado').value == "") &&
+          (document.getElementById('cidade').value == atleticas[atletica][1] || document.getElementById('cidade').value == "")) ||
+          (atleticas[atletica][0] == "UNI"))
           {
             var image = 'icons/icon_'+atleticas[atletica][0]+'.png';
             var Marker = new google.maps.Marker({
