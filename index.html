@@ -1,142 +1,518 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
   <head>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+
     <meta charset="utf-8">
-    <title>Atléticas Universipraia 2018</title>
-    <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      #map {
-        height: 94%;
-      }
-      #filter_menu{
-        height: 5%;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Betows</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="css/agency.min.css" rel="stylesheet">
+
   </head>
-  <body>
-    <div id="filter_menu">
-      Estado:
-      <select id="estado" onchange="initMap()">
-       <option value="">Todos</option>
-       <option value="PR">Paraná</option>
-       <option value="RS">Rio Grande do Sul</option>
-       <option value="SC">Santa Catarina</option>
-      </select>
-      Cidade:
-      <select id="cidade" onchange="initMap()">
-       <option value="">Todos</option>
-       <option value="Blumenau">Blumenau</option>
-       <option value="Chapeco">Chapecó</option>
-       <option value="Criciuma">Criciúma </option>
-       <option value="Caxias do Sul">Caxias do Sul</option>
-       <option value="Erechim">Erechim</option>
-       <option value="Curitiba">Curitiba</option>
-       <option value="Curitiba">Curitiba</option>
-       <option value="Florianopolis">Florianópolis</option>
-       <option value="Guarapuava">Guarapuava</option>
-       <option value="Lajeado">Lajeado</option>
-       <option value="Pelotas">Pelotas</option>
-       <option value="RioGrande">Rio Grande</option>
-       <option value="Xanxere">Xanxerê</option>
-      </select>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Betows</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav text-uppercase ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#services">Serviços</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#portfolio">Portifólio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">Sobre</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#team">Feedback</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Contato</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="masthead">
+      <div class="container">
+        <div class="intro-text">
+          <div class="intro-lead-in">Bem vindo!</div>
+          <div class="intro-heading text-uppercase">Frase de bem vindo</div>
+          <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Saiba mais</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Services -->
+    <section id="services">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">Serviços</h2>
+            <h3 class="section-subheading text-muted">Estes são os serviços que podemos te oferecer.</h3>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-md-4">
+            <span class="fa-stack fa-4x">
+              <i class="fas fa-circle fa-stack-2x text-primary"></i>
+              <i class="fas fa-graduation-cap fa-stack-1x fa-inverse"></i>
+            </span>
+            <h4 class="service-heading">Cursos</h4>
+            <p class="text-muted">Bla bla bla bla bla bla sobre os cursos blua vlabajifsia hasuffhasu hfah ais hofh ahf hasufh sahu huas huafashu ashu ashuu huafsh asf i.</p>
+          </div>
+          <div class="col-md-4">
+            <span class="fa-stack fa-4x">
+              <i class="fas fa-circle fa-stack-2x text-primary"></i>
+              <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
+            </span>
+            <h4 class="service-heading">Vídeo aulas</h4>
+            <p class="text-muted">Se especialize do conforto da sua casa com conteudos sob demanda. Blb lalbljsdiha ihblalal blala lbl lablblabllal lblalblal lbl albllblabl</p>
+          </div>
+          <div class="col-md-4">
+            <span class="fa-stack fa-4x">
+              <i class="fas fa-circle fa-stack-2x text-primary"></i>
+              <i class="fas fa-cut fa-stack-1x fa-inverse"></i>
+            </span>
+            <h4 class="service-heading">Cortes</h4>
+            <p class="text-muted">Corta afasfa sfa sfsa fasf asfasuh fguasgu guasf guagsu gufsguaf uggusf ugasfgu fguasug fugas guasfgu guafsgu fsugas guasugauhs hashu a.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <section class="bg-light" id="portfolio">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">Portifólio</h2>
+            <!--<h3 class="section-subheading text-muted">.</h3>-->
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fas fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/portfolio/01-thumbnail.jpg" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>Curso no Instituto tal</h4>
+              <p class="text-muted">Curso</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fas fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/portfolio/02-thumbnail.jpg" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>Especialização tal</h4>
+              <p class="text-muted">Especialização</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fas fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/portfolio/03-thumbnail.jpg" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>Workshop no tal lugar</h4>
+              <p class="text-muted">Workshop</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">About</h2>
+            <h3 class="section-subheading text-muted">Um pouco do meu currículo.</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <ul class="timeline">
+              <li>
+                <div class="timeline-image">
+                  <img class="rounded-circle img-fluid" src="img/about/1.jpg" alt="">
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4>2009-2011</h4>
+                    <h4 class="subheading">Quando começamos o projeto</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p class="text-muted">Bla bla bla blabalbalbla blballbapl lbla lblp lpdsij asud sahid sa uasiud saiu uisahu sa dhas iua duhaiu sdiub asiu dhusasda ds!</p>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-inverted">
+                <div class="timeline-image">
+                  <img class="rounded-circle img-fluid" src="img/about/2.jpg" alt="">
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4>March 2011</h4>
+                    <h4 class="subheading">Me juntei a tal equipe</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p class="text-muted">Oaisn iash hah huasguuodas dgusau asihdhuasuhd husadhu sahudhu sahud huashu dhusahu dhuash uadshu dhuashud huashu hus dhusahu dashuhu ds!</p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="timeline-image">
+                  <img class="rounded-circle img-fluid" src="img/about/3.jpg" alt="">
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4>December 2012</h4>
+                    <h4 class="subheading">Transição para nosso proprio negocio</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p class="text-muted">Blabll blalblalblbl labllbl lbl alblb lb alb llbla bl albl blbalb labl labl blablllalll blalalllalla lala!</p>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-inverted">
+                <div class="timeline-image">
+                  <img class="rounded-circle img-fluid" src="img/about/4.jpg" alt="">
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4>July 2014</h4>
+                    <h4 class="subheading">Expansão</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p class="text-muted">Expandimos para bla blab blalblalblablal lb llalbllablb lballbalb lbalalb balal bla bla blab blab lbaba ba aba  aabababaa!</p>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-inverted">
+                <div class="timeline-image">
+                  <h4>Seja parte
+                    <br>De nossa
+                    <br>História!</h4>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section class="bg-light" id="team">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">Feedback de nossos clientes</h2>
+            <h3 class="section-subheading text-muted">Ouça um pouco sobre pessoas que já confiaram na gente blab blblalbalblabllab.</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="img/team/1.jpg" alt="">
+              <h4>Kay Garland</h4>
+              <p class="text-muted">Gostei muito pq isso aquklo etc</p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="img/team/2.jpg" alt="">
+              <h4>Larry Parker</h4>
+              <p class="text-muted">amdisjfia nfisanif naisnfi ansi fniasin asin m biainnbia</p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="team-member">
+              <img class="mx-auto rounded-circle" src="img/team/3.jpg" alt="">
+              <h4>Joe Pertersen</h4>
+              <p class="text-muted">Blablalb lalbllbalbla lablll lala lalablblalblablbllab lllalalal aa a</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <p class="large text-muted">O feedback de nossos clientes é muito importante pq tal tal tal tal bla bla bla bla bla bla bla.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--
+    <section class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-sm-6">
+            <a href="#">
+              <img class="img-fluid d-block mx-auto" src="img/logos/envato.jpg" alt="">
+            </a>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <a href="#">
+              <img class="img-fluid d-block mx-auto" src="img/logos/designmodo.jpg" alt="">
+            </a>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <a href="#">
+              <img class="img-fluid d-block mx-auto" src="img/logos/themeforest.jpg" alt="">
+            </a>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <a href="#">
+              <img class="img-fluid d-block mx-auto" src="img/logos/creative-market.jpg" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    -->
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">Entre em contato</h2>
+            <h3 class="section-subheading text-muted">Se interessou por nossos serviços? Solicite um contato.</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <form id="contactForm" name="sentMessage" novalidate="novalidate">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input class="form-control" id="name" type="text" placeholder="Your Name *" required="required" data-validation-required-message="Please enter your name.">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                  <div class="form-group">
+                    <input class="form-control" id="email" type="email" placeholder="Your Email *" required="required" data-validation-required-message="Please enter your email address.">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                  <div class="form-group">
+                    <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" required="required" data-validation-required-message="Please enter your phone number.">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <textarea class="form-control" id="message" placeholder="Your Message *" required="required" data-validation-required-message="Please enter a message."></textarea>
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-lg-12 text-center">
+                  <div id="success"></div>
+                  <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Enviar mensagem</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <span class="copyright">Copyright &copy; José Henrique Luckmann 2018</span>
+          </div>
+          <div class="col-md-4">
+            <ul class="list-inline social-buttons">
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <ul class="list-inline quicklinks">
+              <li class="list-inline-item">
+                <a href="#">Privacy Policy</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">Terms of Use</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Portfolio Modals -->
+
+    <!-- Modal 1 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">Curso tal</h2>
+                  <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                  <img class="img-fluid d-block mx-auto" src="img/portfolio/01-full.jpg" alt="">
+                  <p>Descrever o projeto aqui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                  <ul class="list-inline">
+                    <li>Date: January 2017</li>
+                    <li>Client: Threads</li>
+                    <li>Category: Curso</li>
+                  </ul>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+                    <i class="fas fa-times"></i>
+                    Fechar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div id="map"></div>
-    <script>
 
-      function initMap() {
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 17,
-          center: {lat: -28.485500, lng: -48.768865}
-        });
+    <!-- Modal 2 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">Especialização</h2>
+                  <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                  <img class="img-fluid d-block mx-auto" src="img/portfolio/02-full.jpg" alt="">
+                  <p>Descrever o projeto aquu. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                  <ul class="list-inline">
+                    <li>Date: January 2017</li>
+                    <li>Client: Explore</li>
+                    <li>Category: Especialização</li>
+                  </ul>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+                    <i class="fas fa-times"></i>
+                    Fechar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-        var atleticas = [
-          //NÂO SEI DE ONDE SÃO
-          ["GALOS", "", "", -28.499020, -48.759440],
-          ["CAOTICOS", "", "", -28.440523, -48.822045],
-          ["AAA", "", "", -28.479283, -48.771273],
-          ["ELCARTEL", "", "", -28.479589, -48.768564],
-          ["AAAO", "", "", -28.479170, -48.771095],
+    <!-- Modal 3 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">Workshop tal</h2>
+                  <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                  <img class="img-fluid d-block mx-auto" src="img/portfolio/03-full.jpg" alt="">
+                  <p>Descrever o projeto aqui. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                  <ul class="list-inline">
+                    <li>Date: January 2017</li>
+                    <li>Client: Finish</li>
+                    <li>Category: Workshop</li>
+                  </ul>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+                    <i class="fas fa-times"></i>
+                    Fechar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-          ["AAAFMP", "Porto Alegre", "RS", -28.492774, -48.769442],
-          ["AAAD", "RioGrande", "RS", -28.479563, -48.768879],
-          ["AAACM", "Criciuma", "SC", -28.485123, -48.768999],
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-          ["AAANUD", "Criciuma", "SC", -28.484007, -48.768158],
-          ["AMEN", "Joinvile", "SC", -28.482511, -48.768954],
-          ["AADU", "Florianopolis", "SC", -28.491627, -48.772042],
-          ["AAIFSC", "Florianopolis", "SC", -28.479330, -48.769284],
-          ["AAAUE", "Erechim", "SC", -28.480902, -48.769268],
-          ["AAAEIFC", "Criciuma", "SC", -28.491291, -48.773899],
-          ["AAAEC", "Lajeado", "RS", -28.491348, -48.773857],
-          ["ATECO", "Florianopolis", "SC", -28.485182, -48.768763],
-          ["A5", "Florianopolis", "SC",  -28.490161, -48.771962],
-          ["AAADUPT", "Florianopolis", "SC",  -28.499132, -48.759622],
-          ["AAAC", "Chapeco", "SC", -28.483457, -48.768417],
-          ["ATENUN", "Joinvile", "SC", -28.480905, -48.769055],
-          ["CCTJ", "Joinvile", "SC", -28.479033, -48.768696],
-          ["AAACEM", "Joinvile", "SC", -28.494260, -48.765891],
-          ["AAAEA_UNISOSIESC", "Curitiba", "PR", -28.489165, -48.768100],
-          ["A3RI", "Florianopolis", "SC", -28.497894,-48.758274],
-          ["ATEC", "Florianopolis", "SC", -28.490030, -48.773589],
-          ["ATEP", "Florianopolis", "SC", -28.489486, -48.771194],
-          ["ATEL", "Florianopolis", "SC", -28.493645, -48.769116],
-          ["DIREITO_UFSC", "Florianopolis", "SC", -28.487847, -48.771611],
-          ["AESA", "Florianopolis", "SC", -28.488964, -48.768596],
-          ["ATACA", "Florianopolis", "SC", -28.488803, -48.768497],
-          ["A7", "Florianopolis", "SC", -28.487967, -48.767905],
-          ["ATEQA", "Florianopolis", "SC", -28.486179, -48.771625],
-          ["ATM", "Florianopolis", "SC", -28.486040, -48.768656],
-          ["ATARQ", "Florianopolis", "SC", -28.485596, -48.767667],
-          ["AAAMHS", "Pelotas", "RS", -28.489570, -48.770931],
-          ["AAAMHS", "Pelotas", "RS", -28.483807, -48.768245],
-          ["GENERAL", "Caxias do Sul", "RS", -28.489720, -48.766580],
-          ["ASA", "Curitiba", "PR", -28.489088, -48.765250],
-          ["Engenharias IFSUL", "Pelotas", "RS", -28.481664, -48.768876],
-          ["TENDEL", "Chapeco", "SC", -28.481721, -48.768162],
-          ["ENGENIOS", "Joinvile", "SC", -28.482596, -48.769190],
-          ["PDC", "Criciúma", "SC", -28.494793, -48.767998],
-          ["AAAX", "Xanxere", "SC", -28.490203, -48.768166],
-          ["AAAX", "Xanxere", "SC", -28.487508, -48.767091],
-          ["AAAX", "Xanxere", "SC", -28.486441, -48.771894],
-          ["UNISC", "Santa Cruz do Sul", "RS", -28.480336, -48.773805],
-          ["AARDS", "Blumenau", "SC", -28.482926, -48.770402],
-          ["AAAAF", "Blumenau", "SC", -28.478907, -48.771126],
-          ["AAAOF", "Blumenau", "SC", -28.478918, -48.771319],
-          ["MAMUTES", "Guarapuava", "PR", -28.467057, -48.770600],
-          ["AAAEA", "Blumenau", "SC", -28.486639, -48.766250],
-          ["AAASF", "Blumenau", "SC", -28.487632, -48.771689],
-          ["AAAMV", "Blumenau", "SC", -28.487452, -48.771689],
-          ["AAASC", "Blumenau", "SC", -28.467057, -48.768000],
-          ["UNI", "", "", -28.485532, -48.765468],
-          ["UNI", "", "", -28.494719, -48.761675],
-        ]
-        for (atletica in atleticas)
-        {
-          if(((document.getElementById('estado').value == atleticas[atletica][2] || document.getElementById('estado').value == "") &&
-          (document.getElementById('cidade').value == atleticas[atletica][1] || document.getElementById('cidade').value == "")) ||
-          (atleticas[atletica][0] == "UNI"))
-          {
-            var image = 'icons/icon_'+atleticas[atletica][0]+'.png';
-            var Marker = new google.maps.Marker({
-              position: {lat: atleticas[atletica][3], lng: atleticas[atletica][4]},
-              map: map,
-              icon: image
-            });
-          }
-        }
-      }
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhVDcFleHYnZRiv4UZ-y7DJGgPEgn1hUk&callback=initMap">
-    </script>
+    <!-- Contact form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/agency.min.js"></script>
+
   </body>
+
 </html>
